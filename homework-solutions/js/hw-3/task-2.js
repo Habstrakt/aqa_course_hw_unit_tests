@@ -4,3 +4,8 @@
 n + nn + nnn, где n не перемножаются, а конкатенируются
 
 */
+
+const number = 8;
+const stringNumber = String(number);
+const result = number + Number(stringNumber + stringNumber) + Number(stringNumber + stringNumber + stringNumber);
+console.log(result)
