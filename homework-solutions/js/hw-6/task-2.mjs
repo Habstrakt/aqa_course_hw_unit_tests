@@ -19,14 +19,16 @@ const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 let resultUnique = [];
 let resultNull = null;
 
+const competitorLower = competitorPizzas.map(pizza => pizza.toLowerCase());
+
 for(let pizza of myPizzasT1) {
-  if(!competitorPizzas.includes(pizza)) {
+  if(!competitorLower.includes(pizza.toLowerCase())) {
     resultUnique.push(pizza);
   }
 }
 
 for(let pizza of myPizzasT2) {
-  if(!competitorPizzas.includes(pizza)) {
+  if(!competitorLower.includes(pizza.toLowerCase())) {
     resultUnique.push(pizza);
   }
 }
