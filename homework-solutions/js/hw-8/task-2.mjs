@@ -19,7 +19,16 @@ const words = [
 ];
 
 function sortedByVowels(wordsArr) {
-  // Ваш код
+  const countVowels = (word) => {
+    const matches = word.match(/[aeiou]/gi);
+    return matches ? matches.length : 0;
+  };
+
+  return [...wordsArr].sort((a, b) => {
+    const countA = countVowels(a);
+    const countB = countVowels(b);
+    return countA - countB;
+  });
 }
 
 export { sortedByVowels };
